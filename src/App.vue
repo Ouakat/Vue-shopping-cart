@@ -1,12 +1,18 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <header-nav/>
+       <!--<router-link to="/">Home</router-link> |
+       <router-link to="/about">About</router-link>-->
   <router-view/>
 </template>
-
-<style>
+<script>
+import HeaderNav from '@/components/layout/header.vue';
+export default {
+    components: {
+    HeaderNav
+  },
+}
+</script>
+<style src="@/assets/styles/style.css">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,4 +33,5 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>
